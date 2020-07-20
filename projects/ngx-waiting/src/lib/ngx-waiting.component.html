@@ -1,0 +1,10 @@
+<div [@fadeIn]="'in'" *ngIf="waiting.show" class="overlay" [style.background-color]="waiting.bgColor"
+  [style.z-index]="waiting.zIndex" [style.position]="waiting.fullscreen ? 'fixed' : 'absolute'">
+  <div *ngIf="!template" [class]="waiting.class" [style.color]="waiting.color">
+    <div *ngFor="let index of waiting.iconEleArray"></div>
+  </div>
+  <div *ngIf="template" [innerHTML]="template"></div>
+  <div class="waiting-text" [style.z-index]="waiting.zIndex">
+    <ng-content></ng-content>
+  </div>
+</div>
