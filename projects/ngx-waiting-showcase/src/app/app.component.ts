@@ -7,17 +7,9 @@ import { NgxWaitingService } from 'ngx-waiting';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  sizeArray: Array<string> = ['small', 'default', 'medium', 'large'];
-  loadingText = 'Loading...';
-  waitingConfig: object = {
-    bgColor: 'rgba(0, 0, 0, 1)',
-    size: 'medium',
-    color: '#fff',
-    type: 'ball-8bits',
-    fullScreen: false,
-  };
   waitingType: any = 'ball-8bits';
-  loaders: Array<string> = [
+  bgColor: any;
+  iconList: Array<string> = [
     'ball-8bits',
     'ball-atom',
     'ball-beat',
@@ -72,7 +64,9 @@ export class AppComponent {
     'triangle-skew-spin',
   ];
 
-  constructor(private waiting: NgxWaitingService) {}
+  constructor(private waiting: NgxWaitingService) {
+    this.bgColor = 'rgba(0, 0, 0, 1)';
+  }
   showWaiting(name: string) {
     this.waiting.show(name);
   }

@@ -1,6 +1,6 @@
 {
   "name": "my-workspace-lib",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +10,7 @@
     "format:check": "prettier --list-different \"projects/**/*.ts\"",
     "format:write": "prettier --write \"projects/**/*.ts\"",
     "build": "npm run build:lib && npm run build:showcase",
-    "build:showcase": "ng build --prod ngx-waiting-showcase --base-href='https://aish0507.github.io/ngx-waiting/'",
+    "build:showcase": "ng build --prod ngx-waiting-showcase --base-href https://aish0507.github.io/ngx-waiting/ --deploy-url https://aish0507.github.io/ngx-waiting/",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ngx-waiting-showcase",
     "copy:readme": "copyfiles ./README.md ./dist/ngx-waiting",
     "build:lib": "npm run copy:readme && ng build ngx-waiting --prod"

@@ -63,7 +63,7 @@ export const DEFAULTS = {
 
 export const PRIMARY_WAITING = 'primary';
 
-export type Size = 'default' | 'small' | 'medium' | 'large';
+export type Size = 'nonAppearance' | 'compact' | 'normal' | 'big';
 
 export interface Waiting {
   bgColor?: string;

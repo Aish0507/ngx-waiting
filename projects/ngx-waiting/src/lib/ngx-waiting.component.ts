@@ -46,7 +46,7 @@ export class NgxWaitingComponent implements OnDestroy, OnInit, OnChanges {
     this.zIndex = DEFAULTS.Z_INDEX;
     this.color = DEFAULTS.WAITING_COLOR;
     this.type = DEFAULTS.WAITING_TYPE;
-    this.size = 'large';
+    this.size = 'big';
     this.fullscreen = true;
     this.name = PRIMARY_WAITING;
     this.template = null;
@@ -108,13 +108,13 @@ export class NgxWaitingComponent implements OnDestroy, OnInit, OnChanges {
       .map((x, i) => i);
     let sizeClass = '';
     switch (size.toLowerCase()) {
-      case 'small':
+      case 'compact':
         sizeClass = 'la-sm';
         break;
-      case 'medium':
+      case 'normal':
         sizeClass = 'la-2x';
         break;
-      case 'large':
+      case 'big':
         sizeClass = 'la-3x';
         break;
       default:
